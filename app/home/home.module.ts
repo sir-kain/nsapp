@@ -1,8 +1,8 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
-import { HomeRoutingModule } from "./Home-routing.module";
-import { HomeComponent } from "./Home.component";
+import { HomeRoutingModule } from "./home-routing.module";
+import { HomeComponent } from "./home.component";
 
 @NgModule({
     imports: [
