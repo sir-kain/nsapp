@@ -1,0 +1,12 @@
+npm-debug.log
+*.js.map
+app/**/*.js
+hooks/
+lib/
+node_modules/
+platforms/
+platforms/android/
+platforms/ios/
+tmp/
+typings/
+report/
