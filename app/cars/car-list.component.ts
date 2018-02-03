@@ -55,6 +55,13 @@ export class CarListComponent implements OnInit {
     }
 
     /* ***********************************************************
+    * The back button is essential for a master-detail feature.
+    *************************************************************/
+    onBackButtonTap(): void {
+        this._routerExtensions.backToPreviousPage();
+    }
+
+    /* ***********************************************************
     * Use the "itemTap" event handler of the <RadListView> to navigate to the
     * item details page. Retrieve a reference for the data item (the id) and pass it
     * to the item details page, so that it can identify which data item to display.
