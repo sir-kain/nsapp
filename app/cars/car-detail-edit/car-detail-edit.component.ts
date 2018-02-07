@@ -123,7 +123,6 @@ export class CarDetailEditComponent implements OnInit {
         * and uncomment the code block below to make it editable.
         *************************************************************/
 
-        /* ***********************************************************
         let queue = Promise.resolve();
 
         this._isUpdating = true;
@@ -153,23 +152,22 @@ export class CarDetailEditComponent implements OnInit {
                 this._isUpdating = false;
                 alert({ title: "Oops!", message: "Something went wrong. Please try again.", okButtonText: "Ok" });
             });
-        *************************************************************/
 
         /* ***********************************************************
         * Comment out the code block below if you made the app editable.
         *************************************************************/
-        const readOnlyMessage = "Check out the \"Firebase database setup\" section in the readme file to make it editable."; // tslint:disable-line:max-line-length
-        const queue = Promise.resolve();
-        queue.then(() => alert({ title: "Read-Only Template!", message: readOnlyMessage, okButtonText: "Ok" }))
-            .then(() => this._routerExtensions.navigate(["/cars"], {
-                clearHistory: true,
-                animated: true,
-                transition: {
-                    name: "slideBottom",
-                    duration: 200,
-                    curve: "ease"
-                }
-            }));
+        // const readOnlyMessage = "Check out the \"Firebase database setup\" section in the readme file to make it editable."; // tslint:disable-line:max-line-length
+        // const queue = Promise.resolve();
+        // queue.then(() => alert({ title: "Read-Only Template!", message: readOnlyMessage, okButtonText: "Ok" }))
+        //     .then(() => this._routerExtensions.navigate(["/cars"], {
+        //         clearHistory: true,
+        //         animated: true,
+        //         transition: {
+        //             name: "slideBottom",
+        //             duration: 200,
+        //             curve: "ease"
+        //         }
+        //     }));
     }
 
     private initializeEditOptions(): void {
