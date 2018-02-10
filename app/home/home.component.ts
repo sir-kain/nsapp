@@ -30,8 +30,8 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.email = "ahmandiaye@outlook.com";
-        this.passwd = "passer@1";
+        this.email = "";
+        this.passwd = "";
         /* ***********************************************************
         * Use the "ngOnInit" handler to initialize data for this component.
         *************************************************************/
