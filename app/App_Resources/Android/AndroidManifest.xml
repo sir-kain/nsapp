@@ -32,6 +32,7 @@
 			android:theme="@style/LaunchScreenTheme">
 
 			<meta-data android:name="SET_THEME_ON_LAUNCH" android:resource="@style/AppTheme" />
+			<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
 
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />

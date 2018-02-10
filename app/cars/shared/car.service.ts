@@ -5,6 +5,7 @@ import { Observable } from "rxjs/Observable";
 
 import { Config } from "../../shared/config";
 import { Car } from "./car.model";
+import { LoginType } from "nativescript-plugin-firebase";
 
 const editableProperties = [
     "doors",
@@ -57,6 +58,36 @@ export class CarService {
             };
             firebase.addValueEventListener(onValueEvent, `/${path}`);
         }).catch(this.handleErrors);
+    }
+
+    signup(email: string, passwd: string): Promise<any> {
+        return firebase.createUser({
+            email: email,
+            password: passwd
+        });
+    }
+
+    signinMail(email: string, passwd: string): Promise<any> {
+        return firebase.login({
+            type: firebase.LoginType.PASSWORD,
+            email: email,
+            password: passwd
+        });
+    }
+
+    signinFacebook(): Promise<any> {
+        return firebase.login({
+            type: firebase.LoginType.FACEBOOK,
+            facebookOptions: {}
+        });
+    }
+
+    signout(): Promise<any> {
+        return firebase.logout();
+    }
+
+    getuser(): Promise<any> {
+        return firebase.getCurrentUser();
     }
 
     update(carModel: Car): Promise<any> {
